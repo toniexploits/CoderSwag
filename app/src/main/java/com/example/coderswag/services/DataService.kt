@@ -16,24 +16,35 @@ object DataService {
     )
 
     val hats = listOf(
-        Product("Devslopes Graphic Beanie", "$18", "hat01"),
-        Product("Devslopes Hat Black", "$25", "hat02"),
-        Product("Devslopes Hat White", "$20", "hat03"),
-        Product("Devslopes Hat Snapback", "$22", "hat04")
+        Product("Devslopes Graphic Beanie", "$18", "hat1"),
+        Product("Devslopes Hat Black", "$25", "hat2"),
+        Product("Devslopes Hat White", "$20", "hat3"),
+        Product("Devslopes Hat Snapback", "$22", "hat4")
     )
 
     val hoodies = listOf(
-        Product("Devslopes Hoodie Gray", "$27", "hoodie01"),
-        Product("Devslopes Hoodie Red", "$25", "hoodie02"),
-        Product("Devslopes Hoodie Light Gray", "$24", "hoodie03"),
-        Product("Devslopes Hoodie Black", "$25", "hoodie04")
+        Product("Devslopes Hoodie Gray", "$27", "hoodie1"),
+        Product("Devslopes Hoodie Red", "$25", "hoodie2"),
+        Product("Devslopes Hoodie Light Gray", "$24", "hoodie3"),
+        Product("Devslopes Hoodie Black", "$25", "hoodie4")
     )
 
     val shirts = listOf(
-        Product("Devslopes Shirt Black", "$20", "shirt01"),
-        Product("Devslopes Badge Light Gray", "$24", "shirt02"),
-        Product("Devslopes Shirt Red", "$18", "shirt03"),
-        Product("Devslopes Hussle", "$22", "shirt04"),
-        Product("Kickflip Studios", "$18", "shirt05")
+        Product("Devslopes Shirt Black", "$20", "shirt1"),
+        Product("Devslopes Badge Light Gray", "$24", "shirt2"),
+        Product("Devslopes Shirt Red", "$18", "shirt3"),
+        Product("Devslopes Hussle", "$22", "shirt4"),
+        Product("Kickflip Studios", "$18", "shirt5")
     )
+
+    val digitalGoods = listOf<Product>()
+
+    fun getProducts(category: String) : List<Product>{
+        return when(category){
+            "SHIRTS" -> shirts
+            "HOODIES" -> hoodies
+            "HATS" -> hats
+            else -> digitalGoods
+        }
+    }
 }
